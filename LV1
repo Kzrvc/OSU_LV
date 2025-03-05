@@ -1,0 +1,94 @@
+1:
+def total(sati, eura):
+    return sati * eura
+
+sati = float(input("Radni sati: "))
+eura = float(input("eura/h: "))
+print(f"Ukupno: {total(sati, eura)} eura")
+1:
+sati = float(input("sati: "))
+eura = float(input("eura: "))
+print(f"Ukupno: {sati * eura} eura")
+2:
+try:
+    broj = float(input())
+except:
+    print("Nije unesen broj")
+else:
+    if broj >= 0.9 and broj <=1.0:
+        print("A")
+    elif broj >=0.8 and broj <=0.9:
+     print("B")
+    elif broj >=0.7 and broj <=0.8:
+        print("C")
+    elif broj >=0.6 and broj <=0.7:
+        print("D")
+    elif broj >=0.0 and broj <=0.6:
+        print("F")
+    else:
+        print("Nije dobar broj")
+3:
+lista = []
+x = 10
+while x > 5:
+    unos = input()
+    if unos == "Done":
+        break
+    else:
+        lista.append(int(unos))
+print(len(lista), " brojeva")
+print("sredina ", sum(lista) / len(lista))
+print("min ", min(lista))
+print("max ", max(lista))
+lista.sort()
+print(lista)
+4:
+fhand = open("song.txt")
+wordsCounter = {}
+
+for line in fhand:
+    line = line.rstrip()
+    words = line.split()
+
+    for word in words:
+        wordsCounter[word] = wordsCounter.get(word, 0) + 1
+
+for word, count in wordsCounter.items():
+    if count == 1:
+        print(word)
+
+fhand.close()
+5:
+fhand = open('SMSSpamCollection.txt')
+
+hamCounter = 0
+spamCounter = 0
+totalSpamWords = 0
+totalHamWords = 0
+spamExclemationCounter = 0
+
+for line in fhand:
+    line = line.rstrip()
+    words = line.split()
+
+    word_count = len(words) - 1
+
+    if(words[0] == "ham"):
+        hamCounter += 1
+        totalHamWords += word_count
+    elif(words[0] == "spam"):
+        spamCounter += 1
+        totalSpamWords += word_count
+
+    if line.endswith("!"):
+        spamExclemationCounter += 1
+
+avg_ham = totalHamWords / hamCounter if hamCounter > 0 else 0
+avg_spam = totalSpamWords / spamCounter if spamCounter > 0 else 0
+
+print(f"Prosječan broj riječi u ham porukama: {avg_ham:.2f}")
+print(f"Prosječan broj riječi u spam porukama: {avg_spam:.2f}")
+print(f"Broj spam poruka koje završavaju uskličnikom: {spamExclemationCounter}")
+
+fhand.close()
+
