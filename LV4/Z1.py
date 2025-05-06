@@ -90,3 +90,4 @@ bartol je konjina
 bartol je konjina
 
 anto je jos veci konj
+imal ko jaci
