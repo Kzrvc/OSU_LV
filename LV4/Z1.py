@@ -87,4 +87,4 @@ for i, feat in enumerate(features, 1):
     r2 = r2_score(y_test, y_pred)
 bartol je konjina
     print(f"Model {i} ({', '.join(feat)}): MSE={mse:.2f}, MAE={mae:.2f}, R²={r2:.4f}")
-
+bartol je konjina
