@@ -87,3 +87,5 @@ for i, feat in enumerate(features, 1):
     r2 = r2_score(y_test, y_pred)
     print(f"Model {i} ({', '.join(feat)}): MSE={mse:.2f}, MAE={mae:.2f}, R²={r2:.4f}")
 https://chatgpt.com/share/681b222a-0d54-800e-9c14-8bbf99d77ef4
+
+https://chatgpt.com/share/681b243c-c218-800e-8732-fcfbf48dda51
