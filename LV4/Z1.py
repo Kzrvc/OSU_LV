@@ -86,9 +86,3 @@ for i, feat in enumerate(features, 1):
     mae = mean_absolute_error(y_test, y_pred)
     r2 = r2_score(y_test, y_pred)
     print(f"Model {i} ({', '.join(feat)}): MSE={mse:.2f}, MAE={mae:.2f}, R²={r2:.4f}")
-https://chatgpt.com/share/681b222a-0d54-800e-9c14-8bbf99d77ef4
-
-2. prepravljen
-https://chatgpt.com/share/681b2963-7980-800e-bf1a-4e8a0a32587a
-
-https://chatgpt.com/share/681b264c-37dc-800e-a5e7-e823f651e969
